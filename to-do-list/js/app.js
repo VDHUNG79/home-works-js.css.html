@@ -1,4 +1,5 @@
-// CODE EXPLAINED channel
+// https://www.youtube.com/watch?v=b8sUhU_eq3g&feature=youtu.be
+
 
 // Select the Elements
 const clear = document.querySelector(".clear");
