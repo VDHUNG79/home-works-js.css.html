@@ -111,13 +111,13 @@ class UI {
         <div>
             <h4>${item.title}</h4>
             <h5>$${item.price}</h5>
-            <span class="remove-item" data-id="${item.id}">remove</span>
+            <span class="remove-item" data-id=${item.id}>remove</span>
         </div>
 
         <div>
-            <i class="fas fa-chevron-up data-id="${item.id}"></i>
+            <i class="fas fa-chevron-up" data-id=${item.id}></i>
             <p class="item-amount">${item.amount}</p>
-            <i class="fas fa-chevron-down data-id="${item.id}"></i>
+            <i class="fas fa-chevron-down" data-id=${item.id}></i>
         </div>`;
         cartContent.appendChild(div);
     }
@@ -149,9 +149,30 @@ class UI {
         cartContent.addEventListener('click', event => {
             if (event.target.classList.contains('remove-item')) {
                 let removeItem = event.target;
-                let id = removeItem.dataset.id;
+                let id = addItem.dataset.id;
                 cartContent.removeChild(removeItem.parentElement.parentElement);
                 this.removeItem(id);
+            } else if (event.target.classList.contains('fa-chevron-up')) {
+                let addAmount = event.target;
+                let id = addAmount.dataset.id;
+                let tempItem = cart.find(item => item.id === id);
+                tempItem.amount = tempItem.amount + 1;
+                Storage.saveCart(cart);
+                this.setCartValues(cart);
+                addAmount.nextElementSibling.innerText = tempItem.amount;
+            } else if (event.target.classList.contains('fa-chevron-down')) {
+                let lowerAmount = event.target;
+                let id = lowerAmount.dataset.id;
+                let tempItem = cart.find(item => item.id === id);
+                tempItem.amount = tempItem.amount - 1;
+                if (tempItem.amount > 0) {
+                    Storage.saveCart(cart);
+                    this.setCartValues(cart);
+                    lowerAmount.previousElementSibling.innerText = tempItem.amount;
+                } else {
+                    cartContent.removeChild(lowerAmount.parentElement.parentElement);
+                    this.removeItem(id);
+                }
             }
         });
     }
