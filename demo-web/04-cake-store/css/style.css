@@ -235,7 +235,7 @@ body {
 .show-cart {
   width: 18rem;
   padding: 2rem 1.5rem;
-  transform: rotate(-360deg);
+  transform: rotateY(-360deg);
 }
 
 .cart-item-remove {
