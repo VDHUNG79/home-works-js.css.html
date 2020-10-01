@@ -18,13 +18,31 @@ img {
 .container {
     width: 95%;
     margin: 0 auto;
+    max-width: 70em;
 }
 
 /* typography 
 ============================== */
+h1 {
+    font-weight: 300;
+    font-size: 1.7rem;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
 .title {
     font-size: 2.5rem;
     margin-bottom: 1.5em;
+    font-weight: 900;
+    margin-top: 1em;
 }
 
 .title span {
@@ -34,6 +52,10 @@ img {
 }
 
 @media (min-width: 60rem) {
+    p {
+        font-size: 1.6;
+    }
+
     .title {
         font-size: 3.7rem;
     }
@@ -128,5 +150,75 @@ nav a:focus {
     .home-hero {
         height: 100vh;
         padding-top: 35vh;
+    }
+}
+
+/*  home-hero 
+============================== */
+.home-about-textbox {
+    background-color: #232323;
+    padding: 4em;
+    width: 100vw;
+    margin-left: -2.5%;
+    outline: 2px solid #00ff6c;
+    outline-offset: -2.5em;
+    color: #FFF;
+    position: relative;
+}
+
+.home-about-textbox h1 {
+    color: #00ff6c;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .75em;
+    background: #232323;
+    padding: 0 .145em;
+}
+
+@media (min-width: 25rem) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .home-about-textbox h1 {
+        top: .6em;
+        padding: 0 .325em;
+    }
+}
+
+@media (min-width: 60rem) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-about {
+        background-image: url(../img/who-we-are.jpg);
+        background-repeat: no-repeat;
+        padding-bottom: 10em;
+
+    }
+
+    .home-about-textbox {
+        /* background-color: #232323; */
+        /* padding: 4em; */
+        width: 50%;
+        padding: 7em;
+        outline-offset: -3.75em;
+        margin-left: -2.5%;
+        /* outline: 2px solid #00ff6c; */
+        /* outline-offset: -2.5em; */
+        /* color: #FFF; */
+        /* position: relative; */
+        top: -5em;
+        text-align: left;
+        box-shadow: 0 0 3em 0 rgba(0, 0, 0, .3);
+    }
+
+    .home-about-textbox h1 {
+        top: .75em;
+        /* padding: 0 .5em; */
+        left: 6rem;
+        transform: translateX(0);
     }
 }
