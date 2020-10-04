@@ -168,11 +168,18 @@ p:last-of-type {
     color: #00ff6c;
 }
 
-
-
-
 /* header 
 ============================== */
+
+
+
+
+/* parallax 
+============================== */
+.parallax--bg,
+.parallax--box {
+    transition: initial;
+}
 
 header {
     position: absolute;
@@ -226,6 +233,7 @@ nav a:focus {
     background-position: center;
     padding: 10em 0;
     color: #FFF;
+    /* background-attachment: fixed; */
 }
 
 @media (min-width: 60rem) {
