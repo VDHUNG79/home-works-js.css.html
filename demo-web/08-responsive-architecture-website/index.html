@@ -9,10 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Spinner ===============
+-->
+    <div class="spinner-container">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+<!-- End of Spinner ===============
+-->
+
+
     <div class="container">
 <!-- Header ===============
 -->
-
         <div class="hamburger-menu">
             <div class="line line-1"></div>
             <div class="line line-2"></div>
@@ -32,6 +49,8 @@
             </div>
         </header>
 
+<!-- Navbar ===============
+-->
         <section class="sidebar">
             <ul class="menu">
                 <li class="menu-item">
@@ -62,8 +81,11 @@
 
             </div>
         </section>
+<!-- End of Navbar ===============
+-->
 <!-- End of Header ===============
 -->
+
 
 <!-- End of About us ===============
 -->
@@ -133,55 +155,104 @@
 <!-- Team ===============
 -->
 
-<section class="team">
-    <div class="section-header">
-        <h1 class="section-heading">Our Team</h1>
-        <div class="underline"></div>
-    </div>
+        <section class="team">
+            <div class="section-header">
+                <h1 class="section-heading">Our Team</h1>
+                <div class="underline"></div>
+            </div>
 
-    <div class="cards-wrapper">
-        <div class="card" data-tilt>
-            <div class="card-img-wrapper">
-                <img src="images/person-1.jpg" alt="CEO">
-            </div>
-            <div class="card-info">
-                <h2>John Smith</h2>
-                <h3>CEO</h3>
-                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit"</p> 
-                <button>Read More</button>
-            </div>
-        </div>
+            <div class="cards-wrapper">
+                <div class="card" data-tilt>
+                    <div class="card-img-wrapper">
+                        <img src="images/person-1.jpg" alt="CEO">
+                    </div>
+                    <div class="card-info">
+                        <h2>John Smith</h2>
+                        <h3>CEO</h3>
+                        <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit"</p> 
+                        <button>Read More</button>
+                    </div>
+                </div>
 
-        <div class="card" data-tilt>
-            <div class="card-img-wrapper">
-                <img src="images/person-2.jpg" alt="Designer">
-            </div>
-            <div class="card-info">
-                <h2>Ann Brown</h2>
-                <h3>Designer</h3>
-                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit"</p> 
-                <button>Read More</button>
-            </div>
-        </div>
+                <div class="card" data-tilt>
+                    <div class="card-img-wrapper">
+                        <img src="images/person-2.jpg" alt="Designer">
+                    </div>
+                    <div class="card-info">
+                        <h2>Ann Brown</h2>
+                        <h3>Designer</h3>
+                        <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit"</p> 
+                        <button>Read More</button>
+                    </div>
+                </div>
 
-        <div class="card" data-tilt>
-            <div class="card-img-wrapper">
-                <img src="images/person-3.jpg" alt="Architect">
+                <div class="card" data-tilt>
+                    <div class="card-img-wrapper">
+                        <img src="images/person-3.jpg" alt="Architect">
+                    </div>
+                    <div class="card-info">
+                        <h2>Mary Doe</h2>
+                        <h3>Architect</h3>
+                        <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit"</p> 
+                        <button>Read More</button>
+                    </div>
+                </div>
             </div>
-            <div class="card-info">
-                <h2>Mary Doe</h2>
-                <h3>Architect</h3>
-                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit"</p> 
-                <button>Read More</button>
-            </div>
-        </div>
-    </div>
-</section>
-
+        </section>
 <!-- End of Team ===============
 -->
 
+
+<!-- Contact ===============
+-->
+        <section class="contact">
+            <div class="contact-wrapper">
+                <div class="contact-left"></div>
+                <div class="contact-right">
+                    <h1 class="contact-heading">Contact</h1>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="field">
+                            <label for="" class="input-label">Full Name</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" class="field">
+                            <label for="" class="input-label">Email</label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="field"></textarea>
+                            <label class="message">Message</label>
+                        </div>
+                        <input type="submit" class="submit-btn" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+<!-- End of Contact ===============
+-->
+
+
+<!-- Footer ===============
+-->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="copyright">Copyright &copy; 2020, CodeAndCreate All Rights Reserved</p>
+                <div class="social-list">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+<!-- End of Footer ===============
+-->
     </div>
+
+    <a href="#" class="scroll-btn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
     <script src="script.js"></script>
     <script
 		src="https://code.jquery.com/jquery-3.5.1.js"
@@ -196,7 +267,17 @@
     Code And Create
     Responsive Website with HTML, CSS, and JavaScript / How to Build Responsive Website - HTML, CSS, JS - Architecture Web
     https://www.youtube.com/watch?v=3J-EFMzz94g&t=7736s
-    Continue: 00:52:00
+    
+    - Section Header: 00:09:00
+    - Section Navbar: 00:29:00
+    - Section About Us: 00:52:00
+    - Section Team: 01:09:00
+    - Section Contact: 01:28:00
+    - Section Footer: 01:45:00
+    - Link to the Page: 01:51:00
+    - Make Responsive: 01:53:00
+    - Make Spinner: 02:09:00
+        Go on: 02:05:00
 
     Link Reference:
 
@@ -215,5 +296,8 @@
 
     jQuery CDN
     https://code.jquery.com/
+
+    cubic-bezier
+    https://cubic-bezier.com/
 
 -->
