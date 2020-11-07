@@ -19,8 +19,18 @@ class DBController {
         }
         echo "Connection successful ...!";
     }
+
+    public  function __destruct()
+    {
+        $this->closeConnection();
+    }
+
+    // For MySQL closing Connection
+    protected function closeConnection() {
+        if ($this->con != null) {
+            $this->con->close();
+            $this->con = null;
+        }
+    }
 }
 
-
-// DBController Object
-$db = new DBController();

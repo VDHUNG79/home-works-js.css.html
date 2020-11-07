@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="style.css">
 
     <?php
-        // require function.php
-        require('./database/DBController.php');
+        // require functions.php
+        require('./functions.php');
     ?>
 
 </head>

@@ -1,0 +1,224 @@
+@import url("../css/fonts.css");
+
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+:root {
+    /* ===== Theme colors ===== 
+    https://coolors.co/
+    */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #fff;
+    --midnight: #104f55;
+
+    /* ===== Theme Gradients ===== 
+    https://webgradients.com/
+    */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+
+    /* ===== Theme font-family ===== */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+
+/* ============================== Global Classes ============================== */
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--Lexend);
+}
+
+h3 {
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+/* ===============X=============== End of Global Classes ===============X=============== */
+
+
+/* ============================== Navigation ============================== */
+.nav {
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    border: 1px solid #ff523b; /* Remove late */
+    transition: height 1s ease-in-out; /* for transition of .collapse */
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toogle-collapse {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    cursor: pointer;
+    display: none; /* Display less then 750px */
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.nav .toogle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.nav .toogle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.collapse {
+    height: 30rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+    border: 1px solid #ff523b; /* Remove late */
+
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.6rem 1rem;
+    font-size: 1.6rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+    color: var(--white);
+}
+
+.nav .nav-brand a {
+    font-size:  1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend);
+
+    font-size: 1.6rem;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+
+.nav .social {
+    padding: 1.4rem 0;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.nav .social i {
+    padding: 0 0.2rem;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.nav .social i:hover {
+    color: #a1c4cf;
+}
+/* ===============X=============== End of Navigation ===============X=============== */
+
+
+
+
+/* ============================== Main Site Section ============================== 01:10:00 */
+
+/* ============================== Site Title ============================== */
+.main .site-title {
+    background: url(../assets/Background-image.png);
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.main .site-title .site-background {
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.main .site-title h1, h3 {
+    margin: 0.3rem;
+    border: 1px solid #ff523b; /* Remove late */
+}
+
+.main .site-title .btn {
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+.main .site-title .btn:hover {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+/* ===============X=============== End of Site Title ===============X=============== */
+
+
+/* ===============X=============== End of Main Site Section ===============X=============== */
+
+
+
+/* ============================== Viewport less than or equal to 750px ============================== 53:00 */
+@media only screen and (max-width: 750px) {
+    .nav .nav-menu, .nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toogle-collapse {
+        display: initial;
+    }
+}
+
+/* ===============X=============== End of Viewport less than or equal to 750px ===============X=============== */
+
