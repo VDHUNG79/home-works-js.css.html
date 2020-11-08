@@ -1,9 +1,9 @@
 @import url("../css/fonts.css");
 
 html, body {
-    margin: 0;
+    margin: 0%;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 :root {
@@ -34,14 +34,12 @@ html, body {
 a {
     text-decoration: none;
     color: var(--text-gray);
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .flex-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 ul {
@@ -71,17 +69,33 @@ button.btn {
     cursor: pointer;
 }
 
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 0 5vw;
+}
+
+.text-gray {
+    color: var(--text-gray);
+}
+
+p {
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
 /* ===============X=============== End of Global Classes ===============X=============== */
 
 
 /* ============================== Navigation ============================== */
 .nav {
     background: white;
-    padding: 0 2rem;
+    padding: 0 2rem ;
     height: 0rem;
     min-height: 10vh;
     overflow: hidden;
-    border: 1px solid #ff523b; /* Remove late */
     transition: height 1s ease-in-out; /* for transition of .collapse */
 }
 
@@ -95,20 +109,17 @@ button.btn {
     width: 90%;
     cursor: pointer;
     display: none; /* Display less then 750px */
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .nav .toogle-collapse .toggle-icons {
     display: flex;
     justify-content: flex-end;
     padding: 1.7rem 0;
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .nav .toogle-collapse .toggle-icons i {
     font-size: 1.4rem;
     color: var(--text-gray);
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .collapse {
@@ -118,17 +129,15 @@ button.btn {
 .nav .nav-items {
     display: flex;
     margin: 0;
-    border: 1px solid #ff523b; /* Remove late */
 
 }
 
 .nav .nav-items .nav-link {
     padding: 1.6rem 1rem;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     position: relative;
     font-family: var(--Abel);
     font-size: 1.1rem;
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .nav .nav-items .nav-link:hover {
@@ -144,20 +153,16 @@ button.btn {
     padding: 1rem 0;
     display: block;
     font-family: var(--Lexend);
-
     font-size: 1.6rem;
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 
 .nav .social {
     padding: 1.4rem 0;
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .nav .social i {
     padding: 0 0.2rem;
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .nav .social i:hover {
@@ -172,24 +177,21 @@ button.btn {
 
 /* ============================== Site Title ============================== */
 .main .site-title {
-    background: url(../assets/Background-image.png);
+    background: url('../assets/Background-image.png');
     background-size: cover;
     height: 110vh;
     display: flex;
     justify-content: center;
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .main .site-title .site-background {
     padding-top: 10rem;
     text-align: center;
     color: var(--white);
-    border: 1px solid #ff523b; /* Remove late */
 }
 
 .main .site-title h1, h3 {
-    margin: 0.3rem;
-    border: 1px solid #ff523b; /* Remove late */
+    margin: .3rem;
 }
 
 .main .site-title .btn {
@@ -202,7 +204,152 @@ button.btn {
     border: 1px solid var(--white);
     color: var(--white);
 }
+
 /* ===============X=============== End of Site Title ===============X=============== */
+
+
+/* ============================== Blog Carousel ============================== 01:27:00 */
+.main .blog {
+    background: url(../assets/Abract01.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+.main .blog .blog-post  {
+    padding-top: 6rem;
+}
+
+.main .blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main .blog-post .blog-title {
+    padding: 2rem 0;
+}
+
+.main .blog-content .btn-blog {
+    padding: 0.7rem 2rem;
+    background: var(--sky);
+    margin: 0.5rem;
+}
+
+.main .blog-content span {
+    display: block;
+}
+
+.section .container .owl-nav {
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next {
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+
+/* select all class start with owl- */
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: transparent;
+    color: var(--midnight);
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    outline: none;
+}
+/* ===============X=============== End of Blog Carousel ===============X=============== */
+
+
+/* ============================== Site Content ============================== 01:48:00 */
+.main .site-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.main .post-content {
+    width: 100%;
+}
+
+/* ">" to choose more than one child in the div */
+.main .site-content .post-content > .post-image, .post-title {
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.main .site-content .post-content > .post-image .post-info {
+    background: var(--sky);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+    border-radius: 3rem;
+}
+
+.main .site-content .post-content > .post-image > div {
+    overflow: hidden;
+}
+
+.main .site-content .post-content > .post-image .img {
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.main .site-content .post-content > .post-image .img:hover {
+    transform: scale(1.3);
+}
+
+
+.main .site-content .post-content > .post-image .post-info span {
+    margin: 0 0.5rem;
+}
+
+.main .post-content .post-title a {
+    font-family: var(--Anton);
+    font-size: 1.5rem;
+}
+
+.site-content .post-content .post-title .post-btn {
+    border-radius: 0;
+    padding: 0.7rem 1.5rem;
+    background: var(--sky);
+}
+
+/* ===== Pagination ===== 02:10:00 */
+.site-content .pagination {
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 4rem 0;
+}
+
+.site-content .pagination a {
+    padding: 0.6rem 0.9rem;
+    border-radius: 2rem;
+    margin: 0.3rem;
+    font-family: var(--Lexend);
+}
+
+.site-content .pagination .pages {
+    background: var(--text-gray);
+    color: var(--white);
+    border: 1px solid #ff523b; /* Remove late */
+}
+/* ===X=== Pagination ===X=== */
+
+
+/* ===============X=============== End of Site Content ===============X=============== */
+
+
 
 
 /* ===============X=============== End of Main Site Section ===============X=============== */
