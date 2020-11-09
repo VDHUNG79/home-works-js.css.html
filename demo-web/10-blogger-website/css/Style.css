@@ -342,18 +342,204 @@ p {
 .site-content .pagination .pages {
     background: var(--text-gray);
     color: var(--white);
-    border: 1px solid #ff523b; /* Remove late */
 }
 /* ===X=== Pagination ===X=== */
 
+/* ===== Sidebar ===== */
+.site-content > .sidebar .category-list {
+    font-family: var(--Livvic);
+}
 
+.site-content > .sidebar .category-list .list-items {
+    background: var(--sky);
+    padding: 0.4rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-content .sidebar .category-list .list-items a {
+    color: black;
+}
+
+
+.site-content .sidebar .popular-post .post-content {
+    padding: 1rem 0;
+}
+
+.site-content .sidebar .popular-post h2 {
+    padding-top: 8rem;
+}
+
+.site-content .sidebar .popular-post .post-info {
+    padding: 0.4rem 0.1rem !important;
+    bottom: 0rem !important;
+    left: 1rem !important;
+    border-radius: 0rem !important;
+    background: var(--white) !important;
+}
+
+
+/* ===== Newsletter ===== */
+.site-content .sidebar .newsletter {
+    padding-top: 10rem;
+}
+
+.site-content .sidebar .newsletter .form-element {
+    padding: 0.5rem 2rem;
+}
+
+.site-content .sidebar .newsletter .input-element {
+    width: 80%;
+    height: 1.9rem;
+    padding: 0.3rem 0.5rem;
+    font-family: var(--Lexend);
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn {
+    border-radius: 0;
+    padding: 0.8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+
+/* ===== Popular Tag  ===== */
+.site-content .sidebar .popular-tags {
+    padding: 5rem 0;
+}
+
+.site-content .sidebar .popular-tags h2 {
+    padding-top: 4rem 0;
+} 
+
+
+.site-content .sidebar .popular-tags .tags .tag {
+    background: var(--sky);
+    padding: 0.4rem 1rem;
+    border-radius: 3rem;
+    margin: 0.4rem 0.6rem;
+}
+/* ===X=== End of Sidebar ===X=== */
 /* ===============X=============== End of Site Content ===============X=============== */
-
-
-
-
 /* ===============X=============== End of Main Site Section ===============X=============== */
 
+
+/* ============================== Footer Site Section ============================== */
+.footer {
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* or */
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /* or */
+    /* grid-template-columns: repeat(4, 1fr); */
+}
+
+.footer .container > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+
+.footer .container h2 {
+    color: var(--white);
+}
+
+.footer .newsletter .form-elment {
+    background: black;
+    display: inline-block;
+}
+
+.footer .newsletter .form-elment input {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 74%;
+}
+
+.footer .newsletter .form-elment span {
+    background: var(--sky);
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+}
+
+.footer .instagram div > img {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: 0.3rem 0.4rem;
+}
+
+
+.footer .follow i {
+    color: var(--white);
+    padding: 0 0.4rem;
+}
+
+.footer .rights {
+    justify-content: center;
+    font-family: var(--Josefin);
+}
+
+.footer .rights h4 a {
+    color: var(--white);
+}
+
+/* ====== Move Up Button ====== */
+.footer .move-up {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+.footer .move-up span {
+    color: var(--midnight);
+}
+
+.footer .move-up span:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footer .move-up span i {
+    border: 1px solid #ff523b; /* Remove late */
+}
+/* ===X=== End of Move Up Button ===X=== */
+
+/* ===============X=============== End of Footer Site Section ===============X=============== */
+
+
+
+/* ============================== Viewport less than or equal to 1130px ============================== 03:06:00 */
+@media only screen and (max-width: 1130px) {
+    .site-content .post-content > .post-image .post-info {
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidebar .popular-post .post-info {
+        display: none !important;
+    }
+
+    .footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+/* ===============X=============== End of Viewport less than or equal to 1130px ===============X=============== */
 
 
 /* ============================== Viewport less than or equal to 750px ============================== 53:00 */
@@ -365,7 +551,41 @@ p {
     .nav .toogle-collapse {
         display: initial;
     }
-}
 
+
+    .main .site-content {
+        grid-template-columns: 100%;
+    }
+
+    .footer .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 /* ===============X=============== End of Viewport less than or equal to 750px ===============X=============== */
+
+
+/* ============================== Viewport less than or equal to 500px ============================== */
+@media only screen and (max-width: 520px) {
+    .main .blog {
+        height: 125vh;
+    }
+
+    .site-content .post-content > .post-image .post-info {
+        display: none;
+    }
+
+    .footer .container > div {
+        padding: 1rem 0.9rem !important;
+    }
+
+    .footer .rights {
+        padding: 0rem 1.4rem;
+        text-align: center;
+    }
+
+    .nav .toogle-collapse {
+        width: 80% !important;
+    } 
+}
+/* ===============X=============== End of Viewport less than or equal to 500px ===============X=============== */
 
