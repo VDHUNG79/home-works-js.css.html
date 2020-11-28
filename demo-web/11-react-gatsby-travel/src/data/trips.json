@@ -1,0 +1,29 @@
+[
+  {
+    "img" : "../assets/images/destination/fansipan-1.jpg",
+    "alt" : "Fansipan Mountain",
+    "name" : "Fansipan Mountain",
+    "button" : "View Destination"
+  },
+
+  {
+    "img" : "../assets/images/destination/hoi-an-1.jpg",
+    "alt" : "Hoi An Ancient Town",
+    "name" : "Hoi An Ancient Town",
+    "button" : "View Destination"
+  },
+
+  {
+    "img" : "../assets/images/destination/hue-1.jpg",
+    "alt" : "King Capital",
+    "name" : "King Capital",
+    "button" : "View Destination"
+  },
+
+  {
+    "img" : "../assets/images/destination/mekong-delta-1.jpg",
+    "alt" : "Mekong Delta",
+    "name" : "Mekong Delta",
+    "button" : "View Destination"
+  }
+]
