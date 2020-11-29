@@ -37,7 +37,13 @@ const Testimonials = () => {
       <ContentWrapper>
         <ColumnOne>
           <Testimonial>
-            <IoMdCheckmarkCircleOutline />
+            <IoMdCheckmarkCircleOutline
+              css={`
+              color: #3fffa8;
+              font-size: 2rem;
+              margin-bottom: 1rem;
+            `}
+            />
             <h3>Sean Michaels</h3>
             <p>
               {""}
@@ -45,7 +51,13 @@ const Testimonials = () => {
           </Testimonial>
 
           <Testimonial>
-            <FaRegLightbulb />
+            <FaRegLightbulb
+              css={`
+                color: #f9b19b;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+              `}
+            />
             <h3>Sarah Kin</h3>
             <p>
               {""}
