@@ -1,13 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
@@ -19,6 +23,6 @@ reportWebVitals();
 /*
 React & Node Tutorial - Full ECommerce in 9 Hours [2021]
 https://www.youtube.com/watch?v=TRCDsB9i3bI&t=3378s
-Go on 50:00
+Go on 02:11:00
 */ 
 
