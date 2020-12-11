@@ -1,0 +1,22 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.whiteBg {
+  background: $white !important;
+  & a {
+    color: $black !important;
+  }
+}
+
+.transparent {
+  background: transparent;
+  & a {
+    color: $white;
+  }
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
