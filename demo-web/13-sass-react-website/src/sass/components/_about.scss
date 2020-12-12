@@ -5,6 +5,9 @@
   &__h4 {
     font-size: 30px;
     font-weight: 600;
+    @include responsive(765px) {
+      padding-left: 20px;
+    }
   }
 
   &__text {
@@ -13,12 +16,18 @@
     font-weight: 300;
     line-height: 2;
     padding-left: 50px;
+    @include responsive(765px) {
+      padding-left: 20px;
+    }
   }
 
   &__section {
     background: #efefef;
     padding: 60px;
     text-align: center;
+    @include responsive(765px) {
+      margin-bottom: 20px;
+    }
 
     &-icon {
       color: $green;
