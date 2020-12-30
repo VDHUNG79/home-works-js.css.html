@@ -28,6 +28,7 @@ navClose.addEventListener("click", () => {
 PopUp
 =============
  */
+/*
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".popup__close");
 
@@ -42,13 +43,33 @@ if (popup) {
     }, 500);
   });
 }
+*/
+// Retyping
+const popup = document.querySelector(".popup");
+// console.log(popup);
+const closePopup = document.querySelector(".popup__close");
+// console.log(closePopup);
+
+if (popup) {
+  closePopup.addEventListener("click", () => {
+    popup.classList.add("hide__popup");
+  });
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      popup.classList.remove("hide__popup");
+    }, 500);
+  });
+}
+
+
 
 /*
 =============
 Fixed Navigation
 =============
  */
-
+/*
 const navBar = document.querySelector(".navigation");
 const gotoTop = document.querySelector(".goto-top");
 
@@ -76,12 +97,65 @@ Array.from(scrollLink).map(link => {
     document.body.classList.remove("active");
   });
 });
+*/
+// Retyping
+const navBar = document.querySelector(".navigation");
+const gotoTop = document.querySelector(".goto-top");
+// Smooth Scroll
+Array.from(scrollLink).map(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
 
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    // console.log(id);
+
+    const element = document.getElementById(id);
+    // console.log(element);
+    const navHeight = navBar.getBoundingClientRect().height;
+    // console.log(navHeight);
+    const fixNav = navBar.classList.contains("fix__nav");
+    // console.log(fixNav);
+    let position = element.offsetTop - navHeight;
+    console.log(position);
+
+    if (!fixNav) {
+      position = position - navHeight;
+    }
+
+    window.scrollTo({
+      left: 0,
+      top: position
+    });
+    navContainer.style.left = "-30rem";
+    document.body.classList.remove("active");
+  });
+});
+
+/*
 // Fix NavBar
-
 window.addEventListener("scroll", e => {
   const scrollHeight = window.pageYOffset;
   const navHeight = navBar.getBoundingClientRect().height;
+  if (scrollHeight > navHeight) {
+    navBar.classList.add("fix__nav");
+  } else {
+    navBar.classList.remove("fix__nav");
+  }
+
+  if (scrollHeight > 300) {
+    gotoTop.classList.add("show-top");
+  } else {
+    gotoTop.classList.remove("show-top");
+  }
+});
+*/
+
+// Retyping
+window.addEventListener("scroll", e => {
+  const scrollHeight = window.pageYOffset;
+  // console.log(scrollHeight);
+  const navHeight = navBar.getBoundingClientRect().height;
+  // console.log(navHeight);
   if (scrollHeight > navHeight) {
     navBar.classList.add("fix__nav");
   } else {
