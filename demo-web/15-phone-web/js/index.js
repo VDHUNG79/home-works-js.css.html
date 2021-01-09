@@ -23,6 +23,7 @@ navClose.addEventListener("click", () => {
   navContainer.style.width = "0";
 });
 
+
 /*
 =============
 PopUp
@@ -105,6 +106,7 @@ const gotoTop = document.querySelector(".goto-top");
 Array.from(scrollLink).map(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
+    console.log(e);
 
     const id = e.currentTarget.getAttribute("href").slice(1);
     // console.log(id);

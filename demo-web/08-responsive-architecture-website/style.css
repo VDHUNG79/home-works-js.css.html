@@ -14,13 +14,7 @@ html {
     font-size: 62.5%;
 }
 
-.container { 
-    display: none;
-}
 
-.display .container {
-    display: block;
-}
 /* End of Common Style ===============
  */
 
@@ -179,6 +173,13 @@ html {
 /* End of Spinner ===============
  */
 
+.container { 
+    display: none;
+}
+
+.display .container {
+    display: block;
+}
 
 
 /* Header ===============
